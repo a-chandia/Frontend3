@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Usuarios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <h1><i class="fas fa-users-cog"></i> Sistema de Gestión</h1>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="usuarios.html"><i class="fas fa-user-plus"></i> Nuevo Usuario</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="container">
+        <h2>Datos del Sistema</h2>
+        
+        <div class="data-selector">
+            <label for="data-type">Seleccione el tipo de datos:</label>
+            <select id="data-type" class="form-control">
+                <option value="users">Usuarios</option>
+                <option value="posts">Publicaciones</option>
+            </select>
+            <button id="load-data" class="btn btn-primary">Cargar Datos</button>
+        </div>
+        
+        <div class="table-container">
+            <table id="data-table" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>Email</th>
+                        <th>sitio-web</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos se cargarán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
